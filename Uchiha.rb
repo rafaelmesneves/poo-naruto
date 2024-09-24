@@ -3,6 +3,12 @@ require_relative 'Ninja'
 class Uchiha < Ninja
   attr_accessor :nivel_do_sharingan, :sharingan_ativado
 
+
+  def initialize(nome, aldeia)
+    super(nome, aldeia)
+    @habilidade = 8
+  end
+
   NIVEL_1 = 'nivel_1'
   NIVEL_2 = 'nivel_2'
   NIVEL_3 = 'nivel_3'
@@ -21,6 +27,10 @@ class Uchiha < Ninja
     else
       'Mangekyou Sharingan Eterno'
     end
+  end
+
+  def habilidade
+    @habilidade = 8
   end
 
 end
